@@ -1,0 +1,41 @@
+@import '../../../styles.scss';
+
+.wrapper-payment {
+	margin-top:40px;
+
+    &-sub-heading {
+    font-size: 14px;
+    font-weight: bold;
+    @extend .text-red;
+	}
+
+	&-desc {
+		font-size: 12px;
+		
+	}
+}
+.payment-form {
+
+	form {
+		width:400px;
+	}
+	label {
+		font-size: 12px;
+		font-weight: 600;
+
+	}
+	.form-control {
+		border:none;
+		border-bottom : 1px solid $color-grey;
+		font-size:12px;
+		margin-bottom: 20px;
+		border-radius: 0;
+		font-weight: 400;
+		padding: 0;
+		
+		&:focus {
+			outline: none;
+			box-shadow: none;
+		}
+	}
+}

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { AppCarouselComponent } from './components/carousel/carousel.component';
 
 @Component({
   selector: 'app-root',
