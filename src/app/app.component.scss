@@ -101,7 +101,7 @@
 			height: 7px; 
 			width: 7px;
 			list-style-position: inside;
-			background-color: black;
+			background-color: $color-black ;
 			display: inline-block;
 			border-radius: 50%;
 			margin-right: 10px;
@@ -109,7 +109,7 @@
 	}
 	&-product-content-heading {
 		font-weight: 500;
-		color: black;
+		color: $color-black ;
 	}
     // review section
     &-review {  
