@@ -1,12 +1,8 @@
 @import '../styles.scss';
 
-// sec description
-
-
 .section {
     display:flex;
     min-height: 100vh;
-    $bg-color-white : #FFFFFF;
 
     @media screen and (max-width:768px) {
         flex-direction: column;
@@ -19,7 +15,6 @@
 
     &-desc {
         background-color: $bg-color-grey;
-        // align-items: center;
     }
 
     &-box {
@@ -46,17 +41,11 @@
 	&-product-overview {
         text-align: center;
 	}
-	&-product-feature {
-		// padding :0 45px;
-		
-		@media screen and (min-width:px) and (max-width:1440px) {
-			
+	&-product-feature {		
+		@media screen and (min-width:px) and (max-width:1440px) {	
 			padding: 0 ;
 		}
-		// @media screen and (max-width:1367px) and (min-width:1280px) {
-			
-   		// 	 padding: 0 20px;
-		// }
+	
 	}
 	&-product-info {
 		display: flex;
@@ -126,13 +115,9 @@
     &-review {  
         background-color: $bg-color-white;    
     }
-	// &-text-light{
-	// 	color:$color-grey ;
-	// }
+
 	&-sub-heading-desc {
 		font-size:12px;
 	}
-	&-header {
-		// padding: 0 30px;
-	}
+	
 }

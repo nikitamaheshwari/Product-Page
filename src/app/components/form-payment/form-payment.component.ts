@@ -19,27 +19,7 @@ export class FormPaymentComponent implements OnInit {
 		{ name: 'Maharashra' },
 		{ name: 'Gujarat' },
 	];
-	// validation
-	
-	// this.paymentForm = this.fb.group({
-	// 	email: ['', Validators.required],
-	// 	dateExpiry: [''],
-	// 	cvc: ['', Validators.required],
-	// 	name: ['', Validators.required],
-	// 	billingAddress: ['', Validators.required],
-	// 	state: ['', Validators.required],
 
-	// 	zipCode: ['', Validators.required],
-	// });
-	// paymentForm = new FormGroup({
-	// 	email: new FormControl(''),
-	// 	cardExpiry : new FormControl(''),
-	// 	cvc : new FormControl(''),
-	// 	name: new FormControl(''),
-	// 	billingAddress: new FormControl(''),
-	// 	state: new FormControl(''),
-	// 	zipCode  : new FormControl('') 
-	// });
 	constructor(private fb: FormBuilder) { }
 
 	ngOnInit(): void {
