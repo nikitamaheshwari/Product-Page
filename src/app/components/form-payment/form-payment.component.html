@@ -30,7 +30,7 @@
                 </div>
                 <mat-form-field>
                     <mat-label></mat-label>
-                    <input matInput formControlName="name" class="" [style.width.%]='100'>
+                    <input matInput formControlName="name">
                 </mat-form-field>
             </div>
             <!-- <label for="name">Card Holder Name</label> 
@@ -41,7 +41,7 @@
                 <input type="text" id="billing-address" formControlName="billingAddress" class="form-control" />
             </div>
             <div class=" payment-form-card-details">
-                <div >
+                <div class="full-width zip-code">
                     <label for="state">State</label>
                     <mat-form-field>
                         <mat-label>Select state</mat-label>
@@ -50,9 +50,9 @@
                         </mat-select>
                     </mat-form-field>
                 </div>
-                <div>
-                    <label for="zip-code">ZIP Code</label>
-                    <mat-form-field>
+                <div class="full-width zip-code">
+                    <label for="zip-code" >ZIP Code</label>
+                    <mat-form-field class="payment-form-card-cvc ">
                         <input matInput #input formControlName="zipCode"  >
                     </mat-form-field>
                 </div>

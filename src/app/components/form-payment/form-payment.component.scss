@@ -4,7 +4,7 @@
 	margin-top:40px;
 
 	@media screen and (max-width:1024px)  {
-		padding: 0 30px;
+		// padding: 0 30px;
 	}
     &-sub-heading {
     font-size: 14px;
@@ -18,7 +18,15 @@
 	}
 }
 .payment-form {
+	 mat-form-field {
+		width: 100%;
+	}
+	app-date-picker {
+		@media screen and (max-width:640px){
 
+			width: 100%;
+		}
+	}
 	form {
 		width:400px;
 		@media screen and (max-width:768px) {
@@ -48,8 +56,15 @@
 		display:flex;
 		align-items: baseline;
 		margin-bottom: 25px;
+		@media screen and (max-width:640px) 
+		 {
+			flex-wrap: wrap;
+		}
 	}
 	&-card-cvc {
+		@media screen and (max-width:640px){
+			margin-left: 0;
+		}
 		margin-left: 10px;
 	}
 	&-btn-submit {
@@ -62,11 +77,18 @@
 		span {
 			font-weight: 100;
 		}
+		&:focus {
+			box-shadow: none;
+			color:white;
+		}
 	}
 	&-card-holder {
 		margin-bottom: 25px;
 	}
-	&-card-holder mat-form-field {
+	.full-width {
 		width: 100%;
+	}
+	.zip-code {
+		margin-top: 15px;
 	}
 }

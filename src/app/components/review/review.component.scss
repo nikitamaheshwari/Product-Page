@@ -11,7 +11,7 @@
     max-height: 300px;
     max-width: 450px;
     @media screen and (max-width:1024px) and (min-width:769px) {
-        padding: 0 30px;
+        // padding: 0 30px;
         width: 100%;
     }
     @media screen and (max-width:1024px)  {
@@ -19,7 +19,7 @@
 	}
 
     @media screen and (max-width:768px)  {
-        padding: 0 30px;
+        // padding: 0 30px;
         
     }
    &-ratings {
