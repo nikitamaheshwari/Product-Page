@@ -1,7 +1,6 @@
 @import '../../../styles.scss';
 
 .wrapper-payment {
-	margin-top:40px;
 
 	@media screen and (max-width:1024px)  {
 		// padding: 0 30px;
@@ -89,6 +88,12 @@
 		width: 100%;
 	}
 	.zip-code {
+		margin-top: 15px;
+	}
+	.one-liner{
+		text-align: center;
+		font-size: 12px;
+		font-weight: 600;
 		margin-top: 15px;
 	}
 }

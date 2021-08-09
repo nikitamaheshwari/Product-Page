@@ -44,7 +44,7 @@ export class FormPaymentComponent implements OnInit {
 
 	ngOnInit(): void {
 		this.paymentForm = this.fb.group({
-			email: ['', Validators.required],
+			email: ['', [Validators.required, Validators.email]],
 			dateExpiry: [''],
 			cvc: ['', Validators.required],
 			name: ['', Validators.required],
