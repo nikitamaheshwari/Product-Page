@@ -24,13 +24,38 @@
 
     &-box {
         margin:40px 60px;
-		padding: 15px 30px 15px 25px;
+		padding: 15px 30px ;
+		@media screen and (max-width:768px) and (min-width:480px) {
+			margin:40px 85px;
+			padding: 15px 45px;
+
+		}
+		// @media screen and (max-width:769) and (min-width:769px) {
+    	// 	padding: 15px 80px;
+		// }
+		@media screen and (max-width:1366px) and (min-width:1320px) {
+			margin: 40px 45px;
+			padding: 15px 45px;
+		}
+		@media screen and (max-width:1440px) and (min-width:1370px) {
+        margin:40px 65px;
+		padding: 15px 50px;
+		}
     }
 	&-product-overview {
         text-align: center;
 	}
 	&-product-feature {
-		padding :0 45px;
+		// padding :0 45px;
+		
+		@media screen and (min-width:px) and (max-width:1440px) {
+			
+			padding: 0 ;
+		}
+		// @media screen and (max-width:1367px) and (min-width:1280px) {
+			
+   		// 	 padding: 0 20px;
+		// }
 	}
 	&-product-info {
 		display: flex;
@@ -44,6 +69,12 @@
 		}
 	}
   
+	&-carousel{
+		@media screen and (max-width: 1366px) and (min-width:1030px) {
+			max-width: 500px;
+		}
+		padding: 0 40px;
+	}
     &-sub-heading {
         font-size: 14px;
         font-weight: bold;
@@ -59,13 +90,16 @@
 		margin-top:25px;
     }
 	&-product-content {
-		font-size: 12px;
+		font-size: 14px;
 		line-height: 1.5;
 		margin-top: 25px;
-		padding:5px 45px;
+		padding:5px 0;
 		list-style: none;
 		color: #6D6D6D;
-
+		text-align: justify;
+		@media screen and (max-width:1440px) and (min-width:769px) {
+			padding: 0;
+		}
 		
 		li {
 			margin-top: 10px;
@@ -74,7 +108,7 @@
 		}
 		li:before{
 			content: "";
-			height: 7px;
+			height: 7px; 
 			width: 7px;
 			list-style-position: inside;
 			background-color: black;
@@ -85,6 +119,7 @@
 	}
 	&-product-content-heading {
 		font-weight: 500;
+		color: black;
 	}
     // review section
     &-review {  
@@ -95,5 +130,8 @@
 	// }
 	&-sub-heading-desc {
 		font-size:12px;
+	}
+	&-header {
+		padding: 0 30px;
 	}
 }

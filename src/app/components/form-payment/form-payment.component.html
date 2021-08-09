@@ -2,26 +2,63 @@
     <h3 class="wrapper-payment-sub-heading text-red">PAYMENT DETAILS</h3>
     <p class="wrapper-payment-desc wrapper-text-light">Complete your purchase by providing your payment details.</p>
     <div class="payment-form">
-        <form [formGroup] = "paymentForm" (ngSubmit)= "onSubmit()">
-            <label for="email">Email</label>
-            <input type="email" id="email" formControlName='email' class="form-control">
+        <form [formGroup]="paymentForm" (ngSubmit)="onSubmit()">
 
-            <label for="card-details">Card Details</label>
-            <input type="number" id="cvc" formControlName="cvc"  class="form-control">
-            
-            <label for="name">Card Holder Name</label>
-            <input type="text" id ="name" formControlName = "name" class="form-control">
+            <div class="payment-form-card-holder">
+                <div>
+                    <label>Email</label>
+                </div>
+                <mat-form-field>
+                    <mat-label></mat-label>
+                    <input matInput formControlName="email">
+                </mat-form-field>
+            </div>
 
-            <label for="billing-address">Billing Address</label>
-            <input type="text" id="billing-address" formControlName="billingAddress" class="form-control">
-
-            <label for="state">State</label>
-            <input type="text" id="state" formControlName= "state" class="form-control">
-
-            <label for="zip-code">ZIP Code</label>
-            <input type="text" id="zip-code" formControlName= "zipCode" class="form-control" >
-
-            <button type="submit" [disabled] = '!paymentForm.valid' class="btn btn-block">Submit</button>
+            <div class="payment-form-card-holder">
+                <label for="cardDetails">Card Details</label>
+                <div class="payment-form-card-details">
+                    <app-date-picker></app-date-picker>
+                    <mat-form-field class="payment-form-card-cvc">
+                        <mat-label>CVC</mat-label>
+                        <input matInput formControlName="cvc" id="cvc">
+                    </mat-form-field>
+                </div>
+            </div>
+            <div class="payment-form-card-holder">
+                <div>
+                    <label>Card Holder Name</label>
+                </div>
+                <mat-form-field>
+                    <mat-label></mat-label>
+                    <input matInput formControlName="name" class="" [style.width.%]='100'>
+                </mat-form-field>
+            </div>
+            <!-- <label for="name">Card Holder Name</label> 
+            <input type="text" id="name" formControlName="name" class="form-control" />
+            <div *ngIf="submitted && f.name.errors.required" class="error">First Name is required</div> -->
+            <div class="payment-form-card-holder">
+                <label for="billing-address">Billing Address</label>
+                <input type="text" id="billing-address" formControlName="billingAddress" class="form-control" />
+            </div>
+            <div class=" payment-form-card-details">
+                <div >
+                    <label for="state">State</label>
+                    <mat-form-field>
+                        <mat-label>Select state</mat-label>
+                        <mat-select formControlName="state">
+                            <mat-option *ngFor="let state of stateList" value="state.name">{{ state.name }}</mat-option>
+                        </mat-select>
+                    </mat-form-field>
+                </div>
+                <div>
+                    <label for="zip-code">ZIP Code</label>
+                    <mat-form-field>
+                        <input matInput #input formControlName="zipCode"  >
+                    </mat-form-field>
+                </div>
+            </div>
+            <button type="submit" class="btn btn-block payment-form-btn-submit">Pay
+                <span>&#x20B9;</span> 80,230.00 </button>
         </form>
     </div>
 </div>

@@ -3,21 +3,27 @@
 .wrapper-payment {
 	margin-top:40px;
 
+	@media screen and (max-width:1024px)  {
+		padding: 0 30px;
+	}
     &-sub-heading {
     font-size: 14px;
     font-weight: bold;
     @extend .text-red;
+	
 	}
 
 	&-desc {
 		font-size: 12px;
-		
 	}
 }
 .payment-form {
 
 	form {
 		width:400px;
+		@media screen and (max-width:768px) {
+			width:100%
+		}
 	}
 	label {
 		font-size: 12px;
@@ -37,5 +43,30 @@
 			outline: none;
 			box-shadow: none;
 		}
+	}
+	&-card-details {
+		display:flex;
+		align-items: baseline;
+		margin-bottom: 25px;
+	}
+	&-card-cvc {
+		margin-left: 10px;
+	}
+	&-btn-submit {
+		background-color: $color-red;
+		color:$bg-color-white;
+		opacity: 1;
+		font-size: 20px;
+		font-weight: bold;
+		border-radius: 30px;
+		span {
+			font-weight: 100;
+		}
+	}
+	&-card-holder {
+		margin-bottom: 25px;
+	}
+	&-card-holder mat-form-field {
+		width: 100%;
 	}
 }

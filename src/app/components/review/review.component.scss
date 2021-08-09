@@ -2,23 +2,36 @@
 
 .avatar {
     border-radius:50% ;
-    width: 30px;
-    height: 30px;
+    width: 40px;
+    height: 40px;
     border: 1px solid black;
 } 
 .review {
     overflow: auto;
-    max-height: 200px;
+    max-height: 300px;
     max-width: 450px;
-    
-   
+    @media screen and (max-width:1024px) and (min-width:769px) {
+        padding: 0 30px;
+        width: 100%;
+    }
+    @media screen and (max-width:1024px)  {
+		max-width: 100% ;
+	}
+
+    @media screen and (max-width:768px)  {
+        padding: 0 30px;
+        
+    }
+   &-ratings {
+       margin-bottom: 10px;
+   }
 &::-webkit-scrollbar {
-    width: 4px; //Needed scrollbar thumb width to be 7px, so had to define whole scrollbar to be 7px wide.
+    width: 5px; //Needed scrollbar thumb width to be 7px, so had to define whole scrollbar to be 7px wide.
   };
   
   &::-webkit-scrollbar-thumb {
     background: $color-red;
-    border-radius: 25px;
+    border-radius: 40px;
   };
   
   &::-webkit-scrollbar-track {
@@ -31,6 +44,7 @@
         display: flex;
         flex-direction: row;
         align-items: center;
+        margin-bottom:10px;
     }
     &-user-name{
         font-size: 12px;
@@ -40,7 +54,7 @@
     }
     &-container {
         padding-right: 40px;
-        margin: 20px auto;
+        margin: 20px auto 25px  ;
         &:first-child {
             margin-top: 0;
         }

@@ -11,9 +11,9 @@ export class AppCarouselComponent implements OnInit {
 	showNavigationArrows = true;
 	showNavigationIndicators = false;
 	 images = [
-		'../../assets/iphone.jpeg',
-		'../../assets/iphone1.jpeg',
-		'../../assets/iphone1.jpeg',
+		'../../assets/iphone-1.jpeg',
+		'../../assets/iphone-2.jpeg',
+		'../../assets/iphone-3.jpeg',
 	];
 	constructor(config: NgbCarouselConfig) {
 		config.showNavigationArrows = true;
